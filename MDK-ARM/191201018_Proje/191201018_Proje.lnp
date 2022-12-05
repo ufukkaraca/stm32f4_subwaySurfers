@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"191201018_proje\startup_stm32f415xx.o"
+"191201018_proje\dwt_delay.o"
+"191201018_proje\nokia_5110.o"
+"191201018_proje\main.o"
+"191201018_proje\stm32f4xx_it.o"
+"191201018_proje\stm32f4xx_hal_msp.o"
+"191201018_proje\stm32f4xx_hal_tim.o"
+"191201018_proje\stm32f4xx_hal_tim_ex.o"
+"191201018_proje\stm32f4xx_hal_rcc.o"
+"191201018_proje\stm32f4xx_hal_rcc_ex.o"
+"191201018_proje\stm32f4xx_hal_flash.o"
+"191201018_proje\stm32f4xx_hal_flash_ex.o"
+"191201018_proje\stm32f4xx_hal_flash_ramfunc.o"
+"191201018_proje\stm32f4xx_hal_gpio.o"
+"191201018_proje\stm32f4xx_hal_dma_ex.o"
+"191201018_proje\stm32f4xx_hal_dma.o"
+"191201018_proje\stm32f4xx_hal_pwr.o"
+"191201018_proje\stm32f4xx_hal_pwr_ex.o"
+"191201018_proje\stm32f4xx_hal_cortex.o"
+"191201018_proje\stm32f4xx_hal.o"
+"191201018_proje\stm32f4xx_hal_exti.o"
+"191201018_proje\system_stm32f4xx.o"
+--strict --scatter "191201018_Proje\191201018_Proje.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "191201018_Proje.map" -o 191201018_Proje\191201018_Proje.axf
