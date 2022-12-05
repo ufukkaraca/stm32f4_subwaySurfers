@@ -510,17 +510,8 @@ int main(void)
             {
                 NOKIA_Image(Screen_End_Success_Bitmap);
             }
-            NOKIA_Image(screen);
             // Wait 2 seconds
             HAL_Delay(2000);
-            // Start animating
-            for (int i = 1; i > 83; i--)
-            {
-                screen[i] = screen[i - 84];
-                screen[i - 84] = 0x00;
-                NOKIA_Image(screen);
-                HAL_Delay(1);
-            }
             // Reset everything to initial state
             player_position = 0;
             is_jumping = 0;
@@ -528,36 +519,15 @@ int main(void)
             current_iteration = 0;
             crash = 0;
             inputKey = 0;
-            for (int i = 0; i < rows; i++)
+            // Reset the screen array to all 0s
+            for (int i = 0; i < 6; i++)
             {
-                random_index = rand() % 17; // max_index;
                 for (int j = 0; j < 3; j++)
                 {
-                    if (row_combinations[random_index * 3 + j] == 0)
-                    {
-                        for (int k = 0; k < 28; k++)
-                        {
-                            game_image[i * 3 * 28 + j * 28 + k] = Empty_Bitmap[k];
-                        }
-                    }
-                    else if (row_combinations[random_index * 3 + j] == 1)
-                    {
-                        for (int k = 0; k < 28; k++)
-                        {
-                            game_image[i * 3 * 28 + j * 28 + k] = Barrier_Jump_Bitmap[k];
-                        }
-                    }
-                    else if (row_combinations[random_index * 3 + j] == 2)
-                    {
-                        for (int k = 0; k < 28; k++)
-                        {
-                            game_image[i * 3 * 28 + j * 28 + k] = Barrier_Solid_Bitmap[k];
-                        }
-                    }
+                    screen[i][j] = 0;
                 }
             }
-            for (int i = 0; i < 504; i++)
-                screen[i] = 0x00;
+
             NOKIA_Image(Screen_Start_Bitmap);
             game_state = 0;
         }
