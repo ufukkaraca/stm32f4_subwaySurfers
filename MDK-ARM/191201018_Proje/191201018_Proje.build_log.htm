@@ -22,74 +22,134 @@ Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
 C:\bil362l\lab6\191201018_Proje\MDK-ARM\191201018_Proje.uvprojx
-Project File Date:  12/02/2022
+Project File Date:  12/07/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target '191201018_Proje'
 assembling startup_stm32f415xx.s...
 compiling dwt_delay.c...
+compiling stm32f4xx_hal_flash.c...
 compiling stm32f4xx_hal_flash_ramfunc.c...
 compiling stm32f4xx_hal_msp.c...
 compiling stm32f4xx_it.c...
-compiling stm32f4xx_hal_flash_ex.c...
-compiling Nokia_5110.c...
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal_rcc.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal_gpio.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_flash.c...
-compiling stm32f4xx_hal_dma.c...
-../Src/main.c(455): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+../Src/main.c(390): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
   NOKIA_Image(Screen_Start_Bitmap);
               ^~~~~~~~~~~~~~~~~~~
 ../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
  void NOKIA_Image(const char *image);
                               ^
-../Src/main.c(524): warning: passing 'unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-                                NOKIA_Image(screen);
-                                            ^~~~~~
+../Src/main.c(411): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+          NOKIA_Partial_Image(5, 0, 28, 28, Player_Default_Bitmap);
+                                            ^~~~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(465): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 0, 28, 28, Empty_Bitmap);
+                                              ^~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(468): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 0, 28, 28, Barrier_Jump_Bitmap);
+                                              ^~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(471): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 0, 28, 28, Barrier_Solid_Bitmap);
+                                              ^~~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(477): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 28, 28, 28, Empty_Bitmap);
+                                               ^~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(480): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 28, 28, 28, Barrier_Jump_Bitmap);
+                                               ^~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(483): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 28, 28, 28, Barrier_Solid_Bitmap);
+                                               ^~~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(489): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 56, 28, 28, Empty_Bitmap);
+                                               ^~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(492): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 56, 28, 28, Barrier_Jump_Bitmap);
+                                               ^~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(495): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+            NOKIA_Partial_Image(j, 56, 28, 28, Barrier_Solid_Bitmap);
+                                               ^~~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(505): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Jump_Bitmap);
+                                                               ^~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(509): warning: passing 'const unsigned char[28]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Default_Bitmap);
+                                                               ^~~~~~~~~~~~~~~~~~~~~
+../Inc\Nokia_5110.h(19): note: passing argument to parameter 'image' here
+ void NOKIA_Partial_Image(char xNOKIA, char yNOKIA,char xImage,char array_length, const char *image);
+                                                                                              ^
+../Src/main.c(528): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        NOKIA_Image(Screen_End_Fail_Bitmap);
+                    ^~~~~~~~~~~~~~~~~~~~~~
 ../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
  void NOKIA_Image(const char *image);
                               ^
-../Src/main.c(534): warning: passing 'unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-                        NOKIA_Image(screen);
-                                    ^~~~~~
+../Src/main.c(532): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        NOKIA_Image(Screen_End_Success_Bitmap);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~
 ../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
  void NOKIA_Image(const char *image);
                               ^
-../Src/main.c(542): warning: passing 'unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-                                        NOKIA_Image(screen);
-                                                    ^~~~~~
+../Src/main.c(552): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      NOKIA_Image(Screen_Start_Bitmap);
+                  ^~~~~~~~~~~~~~~~~~~
 ../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
  void NOKIA_Image(const char *image);
                               ^
-../Src/main.c(581): warning: passing 'const unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-                        NOKIA_Image(Screen_Start_Bitmap);
-                                    ^~~~~~~~~~~~~~~~~~~
-../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
- void NOKIA_Image(const char *image);
-                              ^
-../Src/main.c(592): warning: passing 'unsigned char[504]' to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-        NOKIA_Image(screen);
-                    ^~~~~~
-../Inc\Nokia_5110.h(18): note: passing argument to parameter 'image' here
- void NOKIA_Image(const char *image);
-                              ^
-6 warnings generated.
+16 warnings generated.
 compiling main.c...
-compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling Nokia_5110.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_dma.c...
 compiling stm32f4xx_hal_pwr_ex.c...
 compiling stm32f4xx_hal_cortex.c...
 compiling stm32f4xx_hal.c...
-compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_tim_ex.c...
 compiling stm32f4xx_hal_exti.c...
 compiling stm32f4xx_hal_tim.c...
+compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=9688 RO-data=2996 RW-data=336 ZI-data=1944  
+Program Size: Code=8576 RO-data=2104 RW-data=228 ZI-data=1948  
 FromELF: creating hex file...
-"191201018_Proje\191201018_Proje.axf" - 0 Error(s), 6 Warning(s).
+"191201018_Proje\191201018_Proje.axf" - 0 Error(s), 16 Warning(s).
 
 <h2>Software Packages used:</h2>
 

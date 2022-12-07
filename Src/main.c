@@ -66,7 +66,6 @@ TIM_HandleTypeDef htim3;
 
 // #region Visuals
 
-
 const unsigned char Screen_Start_Bitmap[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x18, 0x18, 0xd8, 0xd8, 0xd8, 0xf8, 0x00, 0x20, 0xf8, 0x98, 0x98, 0x98, 0x88, 0x80, 0x00, 0x00, 0x98, 0x98, 0x98, 0x98, 0x98, 0xf8, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf8, 0xd8, 0xd8, 0x98, 0xd8, 0xd8, 0x00, 0x00, 0xc0, 0x00, 0x00, 0xc0, 0x00, 0x00, 0xc0, 0xc0, 0x40, 0xc0, 0x00, 0x20, 0xf8, 0x98, 0x18, 0x00, 0xc0, 0xc0, 0xc0, 0xc0, 0x00, 0x00, 0xc0, 0xc0, 0xc0, 0xc0, 0x00, 0x00, 0xc0, 0xc0, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -93,7 +92,6 @@ const unsigned char Screen_End_Success_Bitmap[] = {
 
 // To animate success, first clear the screen, then draw the success image. Then, animate the success image by shifting it to the left and drawing it again.
 
-
 const unsigned char Barrier_Jump_Bitmap[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe7, 0xe7, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
@@ -109,6 +107,16 @@ const unsigned char Player_Default_Bitmap[] = {
 const unsigned char Player_Jump_Bitmap[] = {
     0x00, 0x00, 0x00, 0x00, 0x40, 0x60, 0x30, 0x18, 0x0c, 0x00, 0x00, 0x00, 0x00, 0xe7, 0xe7, 0x00, 0x00, 0x00, 0x00, 0x0c, 0x18, 0x30, 0x60, 0x40, 0x00, 0x00, 0x00, 0x00};
 
+const unsigned char test[] = {
+    0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x04, 0x00, 0x00, 0x40, 0x00, 0x00, 0x08, 0x00, 0x00, 0x20, 0x00, 0x00, 0x01, 0x00, 0x80, 0x00, 0x00, 0x00, 0x02, 0x10, 0x04, 0x00, 0x00, 0x00, 0x00, 0x40, 0x01, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x04, 0x10, 0x00, 0x08, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x01, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x08, 0x20, 0x00, 0x04, 0x00, 0x00, 0x00, 0x80, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x20,
+    0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x10, 0x00, 0x08, 0x00, 0x20, 0x00, 0x00, 0x02, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x10, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x01, 0x00, 0x40, 0x00, 0x00, 0x04, 0x00, 0x00, 0x80, 0x00, 0x02, 0x00, 0x00, 0x20, 0x00, 0x00, 0x08, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x01, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x08, 0x00, 0x00,
+    0x01, 0x00, 0x00, 0x00, 0x80, 0x00, 0x02, 0x00, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x04, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x02, 0x80, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x21, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x40, 0x60, 0x30, 0x18, 0x0c, 0x00, 0x00, 0x00, 0x00, 0xe7, 0xe7, 0x00, 0x00, 0x00, 0x00, 0x0c, 0x18, 0x30, 0x60, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xe7, 0xe7, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x84, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x80, 0x02, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x08, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x01, 0x00, 0x80, 0x00, 0x00, 0x00, 0x02, 0x10, 0x04, 0x00, 0x00, 0x00, 0x00, 0x40, 0x01, 0x00, 0x00, 0x00, 0x00, 0x10, 0x02, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x08, 0x80, 0x04, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x60, 0x30, 0x18, 0x0c, 0x0c, 0x18, 0x30, 0x60, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x21, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x20, 0x00, 0x00, 0x02, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x00, 0x00, 0x00, 0x08, 0x00, 0x20, 0x00, 0x00, 0x08, 0x00, 0x00, 0x10, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00};
+
+const unsigned char test_partial[] = {
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
 // [13] = Center_Left
 // [14] = Center_Right
 // Comparing [13] symbols of different arrays shows what will happen.
@@ -154,6 +162,25 @@ int row_combinations[81] = {
     1, 2, 2,
     // IMPOSSIBLE: {2, 2, 2} is the only combination that is not possible.
     2, 2, 2};
+int level1_combinations[18][3] = {
+    {0, 0, 0},
+    {0, 0, 2},
+    {0, 0, 1},
+    {0, 2, 0},
+    {0, 2, 1},
+    {0, 1, 0},
+    {0, 1, 2},
+    {0, 1, 1},
+    {2, 0, 0},
+    {2, 0, 2},
+    {2, 0, 1},
+    {1, 0, 0},
+    {1, 0, 2},
+    {1, 0, 1},
+    {1, 2, 0},
+    {1, 1, 0},
+    {1, 1, 1},
+};
 // #endregion Row Combinations
 
 volatile uint8_t timer_expired = 0;
@@ -172,12 +199,12 @@ char Read_KeyPad(void)
   HAL_GPIO_WritePin(C3_PORT, C3_PIN, GPIO_PIN_SET);
   HAL_GPIO_WritePin(C4_PORT, C4_PIN, GPIO_PIN_SET);
 
-/*   if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-      ;
-    return '1';
-  } */
+  /*   if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+        ;
+      return '1';
+    } */
 
   if (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
   {
@@ -185,20 +212,20 @@ char Read_KeyPad(void)
       ;
     return '4';
   }
-/* 
-  if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-      ;
-    return '7';
-  }
+  /*
+    if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+        ;
+      return '7';
+    }
 
-  if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-      ;
-    return '*';
-  } */
+    if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+        ;
+      return '*';
+    } */
 
   HAL_GPIO_WritePin(C1_PORT, C1_PIN, GPIO_PIN_SET);
   HAL_GPIO_WritePin(C2_PORT, C2_PIN, GPIO_PIN_RESET);
@@ -219,32 +246,32 @@ char Read_KeyPad(void)
     return '5';
   }
 
-/*   if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-      ;
-    return '8';
-  }
+  /*   if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+        ;
+      return '8';
+    }
 
-  if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-      ;
-    return '0';
-  } */
+    if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+        ;
+      return '0';
+    } */
 
   HAL_GPIO_WritePin(C1_PORT, C1_PIN, GPIO_PIN_SET);
   HAL_GPIO_WritePin(C2_PORT, C2_PIN, GPIO_PIN_SET);
   HAL_GPIO_WritePin(C3_PORT, C3_PIN, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(C4_PORT, C4_PIN, GPIO_PIN_SET);
 
-/*   if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-      ;
-    return '3';
-  }
- */
+  /*   if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+        ;
+      return '3';
+    }
+   */
   if (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
   {
     while (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
@@ -266,97 +293,42 @@ char Read_KeyPad(void)
     return '*';
   } */
 
-/*   HAL_GPIO_WritePin(C1_PORT, C1_PIN, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(C2_PORT, C2_PIN, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(C3_PORT, C3_PIN, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(C4_PORT, C4_PIN, GPIO_PIN_RESET);
+  /*   HAL_GPIO_WritePin(C1_PORT, C1_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(C2_PORT, C2_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(C3_PORT, C3_PIN, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(C4_PORT, C4_PIN, GPIO_PIN_RESET);
 
-  if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
-      ;
-    return 'A';
-  }
+    if (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R1_PORT, R1_PIN)))
+        ;
+      return 'A';
+    }
 
-  if (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
-      ;
-    return 'B';
-  }
+    if (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R2_PORT, R2_PIN)))
+        ;
+      return 'B';
+    }
 
-  if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
-      ;
-    return 'C';
-  }
+    if (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R3_PORT, R3_PIN)))
+        ;
+      return 'C';
+    }
 
-  if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-  {
-    while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
-      ;
-    return 'D';
-  } */
+    if (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+    {
+      while (!(HAL_GPIO_ReadPin(R4_PORT, R4_PIN)))
+        ;
+      return 'D';
+    } */
 
   return 0;
 }
 
-/*unsigned char *generate_random_rows(unsigned char *game_image, int rows, int level)
-{
-
-
-  int max_index=0;
-	
-  switch (level)
-  {
-  case 1:
-    max_index = 17;
-    break;
-  case 2:
-    max_index = 24;
-    break;
-  case 3:
-    max_index = 27;
-    break;
-  default:
-    max_index = 17;
-    break;
-  } 
-
-  int random_index = 0;
-
-  for (int i = 0; i < rows; i++)
-  {
-    random_index = rand() % 17; // max_index;
-    for (int j = 0; j < 3; j++)
-    {
-      if (row_combinations[random_index*3+j] == 0)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Empty_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 1)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Jump_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 2)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Solid_Bitmap[k];
-        }
-      }
-    }
-  }
-  return game_image;
-}
-*/
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -365,9 +337,9 @@ char Read_KeyPad(void)
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -404,56 +376,22 @@ int main(void)
   int current_iteration = 0;
   int crash = 0;
   char inputKey = 0;
-  // Create a buffer for the game image that can hold 25 rows of 3x28 pixels
-  unsigned char game_image[25 * 3 * 28]; // 25 rows, 3 pixels per row, 28 bytes per pixel
-  
-  NOKIA_Out(3, 2, "Debug1");
-  HAL_Delay(700);
 
-  int max_index = 17;
   int random_index = 0;
-	for (int i = 0; i < rows; i++)
-  {
-    random_index = rand() % 17; // max_index;
-    for (int j = 0; j < 3; j++)
-    {
-      if (row_combinations[random_index*3+j] == 0)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Empty_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 1)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Jump_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 2)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Solid_Bitmap[k];
-        }
-      }
-    }
-  }
 
-  NOKIA_Out(3, 5, "Debug4");
-  HAL_Delay(500);
-
-  unsigned char screen[] = {
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x60, 0x30, 0x18, 0x0c, 0x0c, 0x18, 0x30, 0x60, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+  int screen[6][3] = {
+      {0, 0, 0},
+      {0, 0, 0},
+      {0, 0, 0},
+      {0, 0, 0},
+      {0, 0, 0},
+      {0, 0, 0}};
 
   NOKIA_Image(Screen_Start_Bitmap);
-	HAL_Delay(700);
+
+
+  HAL_Delay(700);
+			
   int game_state = 0;
   /* USER CODE END 2 */
 
@@ -468,120 +406,146 @@ int main(void)
     {
       for (current_iteration = 0; current_iteration < rows; current_iteration++)
       {
-				timer_expired = 0;
+        if (current_iteration == 0)
+        {
+          NOKIA_Partial_Image(5, 0, 28, 28, Player_Default_Bitmap);
+          HAL_Delay(700);
+        }
+        timer_expired = 0;
         HAL_TIM_Base_Start_IT(&htim3);
         while (!timer_expired)
         {
           // Receive inputs.
-          if(Read_KeyPad() == '4' && player_position > 0)
+          if (Read_KeyPad() == '4' && player_position > 0)
           {
             player_position--;
           }
-          else if(Read_KeyPad() == '6' && player_position < 3)
+          else if (Read_KeyPad() == '6' && player_position < 2)
           {
             player_position++;
           }
-          else if(Read_KeyPad() == '5')
+          else if (Read_KeyPad() == '5')
           {
             is_jumping = !is_jumping;
           }
+        }
 
-        }
-        // Shift current screen 84 elements to the right, and fill the first 84 elements with the last 84 elements of the game image
-        for (int i = 503; i > 83; i--)
-        {
-          screen[i] = screen[i - 84];
-        }
-        // Fill the first 84 elements of the screen with the corresponding 84 elements of the game image
-        for (int i = 0; i < 84; i++)
-        {
-          screen[i] = game_image[84 * current_iteration + i];
-        }
-        // Add the player to the screen
-        for (int i = 0; i < 28; i++)
-        {
-          if (screen[420 + (28 * player_position) + 13] == 0xe7 && is_jumping == 0)
-          {
-            crash = 1;
-          }
-          else if (screen[420 + (28 * player_position) + 13] == 0xff)
-          {
-            crash = 1;
-          }
-          else
-          {
-            if (is_jumping)
-            {
-              screen[420 + (28 * player_position) + i] = Player_Jump_Bitmap[i];
-            }
-            else
-            {
-              screen[420 + (28 * player_position) + i] = Player_Default_Bitmap[i];
-            }
-          }
-        }
-				// Display new state
-				NOKIA_Image(screen);
-				if(crash) break;
-      }
-			// When loop ends (win) or breaks (crash), display animation.
-			if(crash){ 
-				  for (int i=0;i<504;i++) screen[i] = Screen_End_Fail_Bitmap[i];
-			}
-			else {
-				  for (int i=0;i<504;i++) screen[i] = Screen_End_Success_Bitmap[i];
-			}
-			NOKIA_Image(screen);
-			// Wait 2 seconds
-			HAL_Delay(2000);
-			// Start animating
-			for (int i = 503; i > 83; i--)
-        {
-          screen[i] = screen[i - 84];
-					screen[i-84] = 0x00;
-					NOKIA_Image(screen);
-					HAL_Delay(1);
-        }
-			// Reset everything to initial state
-			 player_position = 0;
-			 is_jumping = 0;
-			 level = 1;
-			 current_iteration = 0;
-			 crash = 0;
-			 inputKey = 0;
-			for (int i = 0; i < rows; i++)
-  {
-    random_index = rand() % 17; // max_index;
+        // Shift array2 3 places to the left.
+        for (int i = 5; i > 0; i--)
+{
     for (int j = 0; j < 3; j++)
     {
-      if (row_combinations[random_index*3+j] == 0)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Empty_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 1)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Jump_Bitmap[k];
-        }
-      }
-      else if (row_combinations[random_index*3+j] == 2)
-      {
-        for (int k = 0; k < 28; k++)
-        {
-          game_image[i * 3 * 28 + j * 28 + k] = Barrier_Solid_Bitmap[k];
-        }
-      }
+        screen[i][j] = screen[i-1][j];
     }
-  }
-			for (int i=0;i<504;i++) screen[i] = 0x00;
-			NOKIA_Image(Screen_Start_Bitmap);
-			game_state = 0;
-			
-			
+}
+
+        // Replace the first 3 elements of array2 with a random row from array1.
+        // Here, we use the rand() function to generate a random number between 0 and 16.
+        random_index = rand() % 17;
+        for (int j = 0; j < 3; j++)
+        {
+          screen[0][j] = level1_combinations[random_index][j];
+        }
+
+        // Using function NOKIA_Partial_Image, we can draw a partial image on the screen.
+        // The first 2 arguments are the x (row) and y (pixel) coordinates of the top starting point.
+        // The next 2 arguments are the width (in pixels) and size (in bytes) of the image.
+        // The last argument is the image itself.
+        // We will use this function to draw all the rows in "screen".
+        for (int j = 0; j < 6; j++)
+        {
+          switch (screen[j][0])
+          {
+          case 0:
+            NOKIA_Partial_Image(j, 0, 28, 28, Empty_Bitmap);
+            break;
+          case 1:
+            NOKIA_Partial_Image(j, 0, 28, 28, Barrier_Jump_Bitmap);
+            break;
+          case 2:
+            NOKIA_Partial_Image(j, 0, 28, 28, Barrier_Solid_Bitmap);
+            break;
+          }
+          switch (screen[j][1])
+          {
+          case 0:
+            NOKIA_Partial_Image(j, 28, 28, 28, Empty_Bitmap);
+            break;
+          case 1:
+            NOKIA_Partial_Image(j, 28, 28, 28, Barrier_Jump_Bitmap);
+            break;
+          case 2:
+            NOKIA_Partial_Image(j, 28, 28, 28, Barrier_Solid_Bitmap);
+            break;
+          }
+          switch (screen[j][2])
+          {
+          case 0:
+            NOKIA_Partial_Image(j, 56, 28, 28, Empty_Bitmap);
+            break;
+          case 1:
+            NOKIA_Partial_Image(j, 56, 28, 28, Barrier_Jump_Bitmap);
+            break;
+          case 2:
+            NOKIA_Partial_Image(j, 56, 28, 28, Barrier_Solid_Bitmap);
+            break;
+          }
+
+          // NOKIA_Partial_Image(0, j * 8, 24, 3, screen[j]);
+        }
+
+        // Add the player to the screen
+        if (is_jumping)
+        {
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Jump_Bitmap);
+        }
+        else
+        {
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Default_Bitmap);
+        }
+
+        // Check if the player has crashed.
+        if (screen[5][player_position] == 2) // Solid Barrier
+        {
+          crash = 1;
+        }
+        else if (screen[5][player_position] == 1 && !is_jumping) // Jumpable Barrier, but not jumping
+        {
+          crash = 1;
+        }
+
+        if (crash)
+          break;
+      }
+      // When loop ends (win) or breaks (crash), display animation.
+      if (crash)
+      {
+        NOKIA_Image(Screen_End_Fail_Bitmap);
+      }
+      else
+      {
+        NOKIA_Image(Screen_End_Success_Bitmap);
+      }
+      // Wait 2 seconds
+      HAL_Delay(2000);
+      // Reset everything to initial state
+      player_position = 0;
+      is_jumping = 0;
+      level = 1;
+      current_iteration = 0;
+      crash = 0;
+      inputKey = 0;
+      // Reset the screen array to all 0s
+      for (int i = 0; i < 6; i++)
+      {
+        for (int j = 0; j < 3; j++)
+        {
+          screen[i][j] = 0;
+        }
+      }
+
+      NOKIA_Image(Screen_Start_Bitmap);
+      game_state = 0;
     }
     else
     {
@@ -589,7 +553,7 @@ int main(void)
       if (Read_KeyPad() == '5')
       {
         // Display Empty Screen
-        NOKIA_Image(screen);
+        NOKIA_Clear();
         game_state = 1;
       }
     }
@@ -598,22 +562,22 @@ int main(void)
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Configure the main internal regulator output voltage
-  */
+   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
   /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
+   * in the RCC_OscInitTypeDef structure.
+   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -624,9 +588,8 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+   */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
@@ -639,10 +602,10 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief TIM3 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief TIM3 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_TIM3_Init(void)
 {
 
@@ -657,7 +620,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 15999;
+  htim3.Init.Prescaler = 999;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 15999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -680,14 +643,13 @@ static void MX_TIM3_Init(void)
   /* USER CODE BEGIN TIM3_Init 2 */
 
   /* USER CODE END TIM3_Init 2 */
-
 }
 
 /**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -698,57 +660,54 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7|GPIO_PIN_13
-                          |GPIO_PIN_14, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_7 | GPIO_PIN_13 | GPIO_PIN_14, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5|GPIO_PIN_10|GPIO_PIN_11, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5 | GPIO_PIN_10 | GPIO_PIN_11, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10|GPIO_PIN_11, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10 | GPIO_PIN_11, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PA4 PA5 PA7 PA13
                            PA14 */
-  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7|GPIO_PIN_13
-                          |GPIO_PIN_14;
+  GPIO_InitStruct.Pin = GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_7 | GPIO_PIN_13 | GPIO_PIN_14;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PC5 PC10 PC11 */
-  GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_10|GPIO_PIN_11;
+  GPIO_InitStruct.Pin = GPIO_PIN_5 | GPIO_PIN_10 | GPIO_PIN_11;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB10 PB11 */
-  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11;
+  GPIO_InitStruct.Pin = GPIO_PIN_10 | GPIO_PIN_11;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB14 PB15 PB6 PB7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_6|GPIO_PIN_7;
+  GPIO_InitStruct.Pin = GPIO_PIN_14 | GPIO_PIN_15 | GPIO_PIN_6 | GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   timer_expired = 1;
 }
 /* USER CODE END 4 */
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -760,14 +719,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
