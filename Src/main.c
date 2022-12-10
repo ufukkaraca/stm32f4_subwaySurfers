@@ -428,6 +428,15 @@ int main(void)
           {
             is_jumping = !is_jumping;
           }
+					
+					if (is_jumping)
+        {
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Jump_Bitmap);
+        }
+        else
+        {
+          NOKIA_Partial_Image(5, player_position * 28, 28, 28, Player_Default_Bitmap);
+        }
         }
 
         // Shift array2 3 places to the left.
